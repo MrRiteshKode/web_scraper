@@ -1,0 +1,102 @@
+{%extends 'base.html'%}
+{%block title%}Home - Web Scraper{%endblock title%}
+{%block body%}
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img src="{{ url_for('static', filename='web.png') }}"class="mx-1" width="40px">
+        <span class="fs-4">Web Scrapy</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/basic">Basic</a>       
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/advance">Advance</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Features</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="#">About</a>
+      </nav>
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h2 class="fw-normal display-6">Welcome to </h2><h1 class="display-4 fw-normal scarpe">Web Scrapy</h1>
+      <p class="fs-5 text-body-secondary">Quickly get the source code of any page by only entering the address or link of website. Use WEB SCRAPY to to get code in prettyfull manner as well as understable.</p>
+    </div>
+  </header>
+
+  <main class="flex">
+    <div class="row row-cols-2 row-cols-md-3 mb-3 text-center webscraper">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Basic <small class="text-body-secondary fw-light" >Try it!</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Used unlimited</li>
+              <li>No login/signup</li>
+              <li>Get custom results</li>
+              <li>No Your data save</li>
+            </ul>
+            <a href="/basic" type="button" class="w-100 btn btn-lg  webbtn">Use Web Scrapy</a>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Advance <small class="text-body-secondary fw-light" >Try it!</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Used unlimited</li>
+              <li>No login/signup</li>
+              <li>Get custom results</li>
+              <li>No Your data save</li>
+            </ul>
+            <a href="/advance" type="button" class="w-100 btn btn-lg  webbtn">Use Web Scrapy</a>
+          </div>
+        </div>
+      </div>    
+    </div>
+    </div>
+  </main>
+
+<div class="container">
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img src="{{ url_for('static', filename='web.png') }}"class="mx-1" width="30px">
+        <small class="d-block mb-3 text-body-secondary">&copy; 2022–2023</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">feature</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+
+{%endblock body%}

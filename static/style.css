@@ -1,0 +1,15 @@
+.scarpe{
+	color: rgb(48, 172, 191);
+}
+.webscraper{
+	justify-content: center;
+}
+.webbtn{
+	background-color:rgb(48, 172, 191);
+}
+.webbtn:hover{
+	background-color:rgb(48, 172, 191);
+}
+.flex{
+	flex-wrap: wrap;
+}

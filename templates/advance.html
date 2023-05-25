@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{%block title%}Use Web Scrapy - Advance{%endblock title%}
+{%block body%}
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img src="{{ url_for('static', filename='web.png') }}"class="mx-1" width="40px">
+        <span class="fs-4">Web Scrapy</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">       
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/basic">Basic</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/advance">Advance</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Features</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="#">About</a>
+      </nav>
+    </div>
+</header>
+</div>
+
+<div class="container">
+	<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Enter Url</label>
+  <input type="text" class="form-control url"  id="exampleFormControlInput1" placeholder="https://www.example.com/">
+ <div class="form-floating my-3">
+  <select class="form-select options" id="floatingSelect" aria-label="Floating label select example">
+    <option value="1" selected>Scrape whole page</option>
+   <option value="2">Element</option>
+   <option value="3">paragraph</option>
+   <option value="4">div</option>
+   <option value="5">span</option>
+  </select>
+  <div class="row my-3">
+  <div class="col">
+    <input type="text" class="form-control" id="idName" placeholder="Id Name">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" id="className" placeholder="Class Name">
+  </div>
+</div>
+  <label for="floatingSelect">Works with selects</label>
+</div>
+  <button type="button" onclick="webAdbtn()" class="btn webbtn my-4">Scrape</button>
+</div>
+</div>
+
+<div class="container">
+
+	<h1 class="text-center">Your Result&nbsp;&nbsp;<span class="badge text-bg-secondary" id="load"></span></h1>
+	<div class="mb-3">
+  <label for="exampleFormControlTextarea1" onclick="copy()" class="form-label btn btn-light">Copy</label>
+
+  <textarea class="form-control code" rows="20">
+  </textarea>
+  <!-- <p class="code"></p> -->
+</div>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img src="{{ url_for('static', filename='web.png') }}"class="mx-1" width="30px">
+        <small class="d-block mb-3 text-body-secondary">&copy; 2022–2023</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">feature</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</div>
+{%endblock body%}
